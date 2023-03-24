@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <script>
+        var item = 1;   // item number
+        var qty = 0;  // quatity
+        
+        var costA = 0; 
+        var costB = 0;
+        var costC = 0; 
+        var costD = 0; 
+        var costE = 0; 
+        var total = 0;
+        var next =1;
+        
+
+
+        document.writeln("<h1>Project 2 by Roberto Gomez</h1>");
+
+        do {
+            item = window.prompt(" Select item number 1-5");
+
+            qty = window.prompt("Enter quantity for this item");
+
+            switch (item) {
+            case "1":
+                costA = costA + qty * 2.99;
+                break;
+            case "2":
+                costB = costB + qty * 4.60;
+                break;
+            case "3":
+                costC = costC + qty * 9.88;
+                break;
+            case "4":
+                costD = costD + qty * 4.39;
+                break;
+            case "5":
+                costE = costE + qty * 6.56;
+                break;
+            default:
+                validInput = false;
+                break;
+            } // end switch
+
+            next = window.prompt("Would you like to add another item? 1 for yes 2 for no");
+        }
+        while (next !=2);
+
+        
+        total = costA + costB + costC + costD + costE;
+
+        // Display the results
+        document.writeln("<h3>Total:  " + total + "</h3>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
