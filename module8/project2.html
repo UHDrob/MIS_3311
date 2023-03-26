@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 2</title>
+          <style type = "text/css">
+         table         { width: 300px;
+                         border-collapse:collapse; 
+                         background-color: lightblue; }
+         table, td, th { border: 1px solid black; 
+                         padding: 4px; }
+         th            { text-align: left; 
+                         color: white;
+                         background-color: darkblue; }
+         tr.oddrow     { background-color: white; }
+      </style>
     <script>
         var item = 1;   // item number
         var qty = 0;  // quatity
@@ -17,8 +28,6 @@
         var total = 0;
         var next =1;
         
-
-
         document.writeln("<h1>Project 2 by Roberto Gomez</h1>");
 
         do {
@@ -51,11 +60,30 @@
         }
         while (next !=2);
 
-        
         total = costA + costB + costC + costD + costE;
+        const subtotal = [costA,costB,costC,costD, costE];
 
         // Display the results
-        document.writeln("<h3>Total:  " + total + "</h3>");
+        document.writeln( "<table>" ); // begin the table
+        document.writeln( "<caption>Weekly Sales</caption>" );
+        document.writeln( "<thead><tr><th>Item</th>" ); // item column heading
+        document.writeln( "<th>Subtotal</th>" ); // amount column heading
+        
+        document.writeln( "</tr></thead><tbody>" );
+        for ( var line = 1; line < 6; ++line )
+        {
+            if ( line % 2 !== 0 )
+               document.writeln( "<tr class='oddrow'><td>" + (line) + 
+                  "</td><td>" + subtotal[line-1].toFixed(2) + "</td></tr>" );
+            else
+               document.writeln( "<tr><td>" + line + 
+                  "</td><td>" + subtotal[line-1].toFixed(2) + "</td></tr>" );
+         } //end for
+        document.writeln("<ttail><tr><th>Grand Total</th>");
+        document.writeln("<th>" + total.toFixed(2) + "</th>");
+        document.writeln( "</tbody></table>" );
+
+        document.writeln("<h3>Weekly Total Sales:  " + total.toFixed(2) + "</h3>");
 
     </script>
 </head>
