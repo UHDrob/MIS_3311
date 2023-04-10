@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fig 9.2</title>
+
+    <script>
+
+        output();
+
+        function output() {
+            // Title
+            document.writeln("<h1>Square the numbers from 1 to 10 </h1>");
+
+            // square the numbers from 1 to 10
+            for (let x = 1; x <= 10; x++) {
+                document.writeln( "<p>The square of " + x + " is " + 
+                    square( x ) + "</p>");
+                
+            }
+        }
+
+
+        // The following square function definition's body is executed
+        // only when the function is called explicitly as in line 15
+        function square ( y ) {
+            return y * y;
+        }
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

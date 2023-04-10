@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fig 9.4</title>
+
+    <style type = "text/css">
+        p, ol { margin: 0; }
+        li    { display: inline; margin-right: 10px; }
+     </style>
+
+    <script>
+        title();
+        process();
+
+
+        function title() {
+            // Title
+            document.writeln("<h1>Random Integers, Shifting, and Scaling </h1>");
+            document.writeln("<h2> Generate random numbers </h2>  <hr>");
+        }
+
+        function process() {
+            var value;
+            document.writeln( "<p>Random Numbers</p><ol>" );
+
+            for (let i = 1; i <= 30; i++) {
+                value = Math.floor( 1 + Math.random() * 6 );
+                document.writeln( "<li>" + value + "</li>" );
+            }
+
+            document.writeln("</ol>")
+            }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
