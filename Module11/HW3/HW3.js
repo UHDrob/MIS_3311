@@ -1,8 +1,8 @@
 
-
+var c = 0;
 function start()
 {
-    var c = -9;
+
     var homework = "<h1> Homework 3 </h1>" + 
         "<h2>Roberto Gomez </h2>" +
         "<h4>  ---- Choose from the three sections below -----</h3>" +
@@ -13,27 +13,27 @@ function start()
             "Z = " +
         "<textarea id = 'z'></textarea> <br> <br>" +
             
-        "<button id = 'absArray'>ABS -Click to Calculate Absolute Value of X for an ARRAY </button>"  +
+        "<button id = 'absArray'>ABS - Click to Calculate Absolute Value of X (each element on Z)</button>"  +
         "<br><br>" +
         "<p id = 'res6'></p>" +
         "<br><br>" +
 
-        "<button id = 'ceilArray'>CEIL - Click to Round X to the smallest integer no less than X for an ARRAY</button>"  +
+        "<button id = 'ceilArray'>CEIL - Click to Round X (each element on Z) to the smallest integer no less than X</button>"  +
         "<br><br>" +
         "<p id = 'res7'></p>" +
         "<br><br>" +
 
-        "<button id = 'floorArray'>FLOOR - Click to Round X to the largest integer no greater than X for an ARRAY</button>"  +
+        "<button id = 'floorArray'>FLOOR - Click to Round X (each element on Z) to the largest integer no greater than X</button>"  +
         "<br><br>" +
         "<p id = 'res8'></p>" +
         "<br><br>" +
 
-        "<button id = 'roundArray'>ROUND - Click to Round X to the closest integer for an ARRAY</button>"  +
+        "<button id = 'roundArray'>ROUND - Click to Round X (each elmenet on Z) to the closest integer</button>"  +
         "<br><br>" +
         "<p id = 'res9'></p>" +
         "<br><br>" +
 
-        "<button id = 'logArray'>LOG - Click to Calculate the Natural Logarithm of X for an ARRAY</button>"  +
+        "<button id = 'logArray'>LOG - Click to Calculate the Natural Logarithm of X (each element on Z)</button>"  +
         "<br><br>" +
         "<p id = 'res10'></p>" +
         "<br><br>" +
@@ -60,12 +60,12 @@ function start()
         "<hr><h3> Section 2 - Counter</h3>" +
         "<h4> Click the button to increase the counter <h4>" +
 
-        "<button onclick='    document.getElementById('res').innerHTML = c++  '< - Click to count </button>"  +
+        "<button onclick='counting()'>  Click to count </button>"  +
         "<br><br>" +
         "<p id = 'res'>0</p>" +
         "<br><br>" ;
 
-    document.getElementById("title").innerHTML = homework;
+    document.getElementById("homework").innerHTML = homework;
 
 absoluteValueArray();
 ceilingValueArray();
@@ -76,30 +76,14 @@ logValueArray();
 maximumValue();
 minimumValue();
 
-
-// clicks();
-
 } // end function start
-
-// function clicks() 
-// {
-//     document.getElementById('counter').addEventListener("click",
-//     counting() );
-// }
 
 function counting()
 {
-    document.getElementById('res').innerHTML = String(c++);
-
-
-    // return;
-    // let count = document.getElementById('count');
-    // c++;
-    
-    // count.innerText = 'The button was clicked: ' + c + ' times!';
+    c++;
+    let count = document.getElementById('res');
+    count.innerText = 'The button was clicked: ' + c + ' times!';
 }
-
-
 
 function absoluteValueArray()
 {
