@@ -1,65 +1,72 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>RG-Class</title>
+    <script>
+        var now = new Date(); //current date and time
+        var hour = now.getHours();  // current hour (0-23)
+        // determine whether it's morning
+        if (hour < 12) 
+            document.write (" <h1> Good morning </h1>" );
+        // determine whethe the time is PM
+        if ( hour >= 12) {
+            // convert to a 12-hours clock
+            hour = hour -12;
+            // determine wheter it is before 6PM
+            if (hour < 6 )
+                document.write( "<h1> Good afternoon </h1>");
+            // determine whether it is after 6 PM
+            if ( hour >= 6 )
+                document.write ("<h1> Good evening");
+        }  // end if
 
-<!-- Fig. 2.1: main.html -->
-<!-- First HTML5 example. -->
-<html>
-   <head>
-      <meta charset = "utf-8">
-      <title>Roberto Gomez</title>
-   </head>
-
-   <body>
-      <p><a href="http://www.uhd.edu">University of Houston - Downtown </a>   </p>
-      <img src="UHD.jpeg" alt="UHD" width="300">
-      
-      <!-- MIS3311 Programming Languages-->
-      <h1>Welcome to my first webpage</h1>
-
-      <ul>
-         <li><a href="FormExercise.html">Form Exercise</a></li>
-
-         <li><a href=""></a></li>
-         <li><a href="/module1/module1.html">Module 1</a></li>
-         <li><a href="module2/module2.html">Module 2</a></li>
-         <ul>
-            <li><a href="project1.html">Project 1 - Form</a></li>
-         </ul>
-         <li><a href="/module3/module3.html">Module 3</a></li>
-         <ul>
-            <li><a href="/module4/in-classEx1.html">In-Class Exercise 1</a></li>
-            <li><a href="/module4/in-classEx2.html">in-Class Exercise 2</a></li>
-         </ul>
-         <li><a href="/module4/module4.html">Module 4</a></li>
-         <li><a href="/module5/module5.html">Module 5</a></li>
-         <li><a href="/module6/module6.html">Module 6</a></li>
-         <li><a href="/module7/module7.html">Module 7</a></li>
-         <li><a href="/module8/module8.html">Module 8</a></li>
-      </ul>
+    </script>
+</head>
+<body>
+    <div id="horizontal">
+        <h1>Welcome to RG-Class</h1>
+    </div>
+    <div>
+        <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="computerscience.html">Computer Science</a></li>
+            <li><a href="languages.html">Languages</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="#highed">Higher Education</a></li>
+            <li style="float:right"><a class="active" href="#about">About</a></li>
+          </ul>
+    </div>
+    <div>
+        <p>
+            <img src="img/lake.jpg" alt="lake" width="500">
+        </p>
+    </div>
+    <div id="round2">
+        <ul>
+            <li>Languages</li>
+            <li>Computer Science</li>
+        </ul>
+    </div>
+    <div id="about">
+        <p>Created by Roberto Gomez</p>
+        <p>University of Hoston - Downtown</p>
+    </div>
 
 
-
-      <hr>
-      <h1>Validators</h1>
-
-      <h2>HTML5</h2>
-      <ul>
-         <li><a href=" html://validator.w3.org">validator.w3.org</a></li>
-         <li><a href="http://html5.validator.nu">html5.validator.nu</a>   </li>
-      </ul>
-      <h2>CSS3</h2>
-      <ul>
-         <li><a href="http://jigsaw.w3.org/css-validator">jigsaw.w3.org/css-validator</a></li>
-      </ul>   
-      <h2>JavaScript</h2>
-      <ul>
-         <li><a href="  http://www.javacriptlint.com ">  www.javacriptlint.com </a> </li>
-         <li><a href="http://www..jslint.com ">www..jslint.com </a>  </li>
-      </ul>
+    
+    <div id="highed">
+        <h2>Higher Education</h2>
+        <p><a href="www.uhd.edu">University of Houston - Downtown</a></p>
+        <p><a href="www,uhcl.edu">University of Houston Clear Lake</a></p>
+        <p><a href="www.uh.edu">University of Houston</a></p>
+        <p><a href="www.lonestar.edu">Lone Star College</a></p>
+    </div>
 
 
-      <hr>
-      <p><a href="mailto:gomezr43@gator.uhd.edu">Roberto Gomez</a>
-      &copy 2023
-      </p>
-   </body>
+    
+</body>
 </html>
