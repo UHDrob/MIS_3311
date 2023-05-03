@@ -1,7 +1,9 @@
 
 /* External style sheet */
 body     { font-family: arial, helvetica, sans-serif; 
-        background-color:yellowgreen}
+        background-color:yellowgreen;
+        margin: 0}
+        
 h1 { color: palegreen; text-align: center; text-shadow: -4px 4px 6px dimgray;}
 h2 { text-align: center;}
 p { color:white; font-size: 14pt}
@@ -9,19 +11,23 @@ a.nodec  { text-decoration: none; }
 a:hover  { text-decoration: underline; }
 li em    { font-weight: bold; }
 
-ul {
+ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    
+    position: fixed;
+    top: 0;
+    width: 100%
   }
   
-  li {
+  ul.topnav li {
     float: left;
   }
   
-  li a {
+  ul.topnav li a {
     display: block;
     color: white;
     text-align: center;
@@ -30,11 +36,19 @@ ul {
   }
   
   /* Change the link color to #111 (black) on hover */
-  li a:hover {
+  ul.topnav li a:hover:not(.active) {
     background-color: #111;
   }
-  .active {
+  ul.topnav li a.active {
     background-color: #04AA6D;
+  }
+  ul.topnav li.right {
+    float: right;
+  }
+
+  @media screen and (max-width: 600px) {
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
   }
 
 #round2 {
@@ -49,9 +63,9 @@ ul {
 }
 #horizontal {
     width: max-content;
-    height: 100px;
+    height: 75px;
     border: 3px solid orange;
-    padding: 5px 400px;
+    padding: 5px 200px;
     text-align: center;
     background: -webkit-gradient(
         linear, left top, right top,

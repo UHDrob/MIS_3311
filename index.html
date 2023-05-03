@@ -9,6 +9,7 @@
     <script>
         var now = new Date(); //current date and time
         var hour = now.getHours();  // current hour (0-23)
+        document.write("<br><br>")
         // determine whether it's morning
         if (hour < 12) 
             document.write (" <h1> Good morning </h1>" );
@@ -28,31 +29,45 @@
 </head>
 <body>
     <div id="horizontal">
-        <h1>Welcome to RG-Class</h1>
+        <h1>Welcome to RG-Class Tutoring Services</h1>
     </div>
     <div>
-        <ul>
+        <ul class="topnav">
             <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="computerscience.html">Computer Science</a></li>
+            <li><a href="#computerscience">Computer Science</a></li>
             <li><a href="languages.html">Languages</a></li>
-            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="newsletterForm.php">Newsletter</a></li>
             <li><a href="#highed">Higher Education</a></li>
-            <li style="float:right"><a class="active" href="#about">About</a></li>
+            <li class="right"><a class="active" href="#about">About</a></li>
           </ul>
     </div>
+
     <div>
         <p>
             <img src="img/lake.jpg" alt="lake" width="500">
         </p>
     </div>
     <div id="round2">
-        <ul>
-            <li>Languages</li>
-            <li>Computer Science</li>
-        </ul>
+        
     </div>
+    <div id="computerscience">
+        <h2>Computer Science</h2>
+        <p>Microsof 365</p>
+        <p>Wev Design</p>
+        <p>Java</p>
+        <p>Python</p>
+        <p>R</p>
+        <p>Robotics</p>
+    </div>
+    <div>
+        <h2>Languages</h2>
+        <p>Spanish</p>
+    </div>
+
     <div id="about">
+        <h2>About</h2>
         <p>Created by Roberto Gomez</p>
+        <p>Management Information Systems</p>
         <p>University of Hoston - Downtown</p>
     </div>
 
