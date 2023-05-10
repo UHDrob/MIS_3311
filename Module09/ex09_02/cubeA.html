@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUBE</title>
+    <script>
+        var x;
+
+        function output() {
+
+        title ();
+
+        for (let x = 0; x < 10; x++ )
+            document.writeln("<p>The cube of " + x + " is " + cube(x) + "</p>");
+        }  // end function output
+
+        // FUNCTIONS
+
+        // The following cube function is exectuted when called on line 16
+        function cube(y) {
+            return y * y * y;
+        } // end function cube
+        
+        //The following title funciton is executed when called on line 13
+        function title() {
+            document.writeln("<h1> Chapter 9 - CUBE </h1>");
+            document.writeln("<h2>Square the numbers from 1 to 10 </h2>")
+        }
+
+        window.addEventListener( "load", output, false);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

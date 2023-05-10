@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 
-<!-- Fig. 19.19: readCookies.php -->
-<!-- Displaying the cookie’s contents. -->
+<!-- Fig. 9.3: maximum.html -->
+<!-- Programmer-Defined maximum function. -->
 <html>
    <head>
       <meta charset = "utf-8">
-      <title>Read Cookies</title>  
+      <title>Maximum of Three Values</title>
       <style type = "text/css">
-         p { margin: 0px; }
+         p { margin: 0; }
       </style>
-   </head>
-   <body>
-      <p>The following data is saved in a cookie on your computer.</p>
-      <?php
-         // iterate through array $_COOKIE and print
-         // name and value of each cookie
-         foreach ($_COOKIE as $key => $value )
-            print( "<p>$key: $value</p>" );
-      ?><!-- end PHP script -->
-   </body>
+      <script>
+
+         var input1 = window.prompt( "Enter first number", "0" );
+         var input2 = window.prompt( "Enter second number", "0" );
+         var input3 = window.prompt( "Enter third number", "0" ); 
+   
+         var value1 = parseFloat( input1 );
+         var value2 = parseFloat( input2 );
+         var value3 = parseFloat( input3 );
+   
+         var maxValue = maximum( value1, value2, value3 );
+
+         document.writeln( "<p>First number: " + value1 + "</p>" +
+            "<p>Second number: " + value2 + "</p>" +
+            "<p>Third number: " + value3 + "</p>" +
+            "<p>Maximum is: " + maxValue + "</p>" );
+
+         // maximum function definition (called from line 22)
+         function maximum( x, y, z )               
+         {                                         
+            return Math.max( x, Math.max( y, z ) );
+         } // end function maximum                                         
+
+      </script>
+   </head><body></body>
 </html>
 
 <!--
