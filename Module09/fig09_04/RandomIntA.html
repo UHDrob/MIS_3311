@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIFTED AND SCALED RANDOM INTEGERS</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+        var value;
+
+        title();
+
+        randomNum();
+
+
+
+        // FUNCTIONS
+        function title(){
+            document.writeln("<h1>Chapter 9 - RandomInt</h1>");
+            document.writeln("<h2>Random integers, shifting and scaling</h2><ol>")
+        }
+
+        function randomNum() {
+            for ( var i = 1; i <= 30; ++i ) 
+            {
+                value = Math.floor( 1 + Math.random() * 6 );
+                document.writeln( "<li>" + value + "</li>" );
+            } // end for
+
+            document.writeln( "</ol>" );
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
